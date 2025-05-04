@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FE tasks - Part 1+2</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="section">
+        <h1>PRODUCTS LIST</h1>
+        <div id="product-list">
+            <!-- Product list will be rendered here -->
+        </div>
+        <div id="modal-popup">
+            <div id="modal-content">
+                <span id="close" onclick="closeModal()">&times;</span>
+                <img id="modal-image">
+                <div id="modal-info">
+                    <h2 id="modal-name"></h2>
+                    <p id="modal-description"></p>
+                    <p id="modal-price"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="product-quantity-list">
+        <h2>ENTER PRODUCT QUANTITIES</h2>
+        <p >*Note: Products with a quantity over 5 will receive a 10% discount.</p>
+        <div id="quantity-section">
+            <!-- Product quantity list will be rendered here -->
+        </div>
+        <button id="calculate-total" class="btn" onclick="calculateTotal()">Calculate Total</button>
+    </div>
+    
+</body>
+
+<script src="script.js"></script>
+</html>

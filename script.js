@@ -32,10 +32,10 @@ quantitySection.innerHTML = products.map(product => `
 `).join('');
 
 // Function to calculate total value
-function calculateTotal() {
+function calculateTotal(productsList) {
     let total = 0;
 
-    products.forEach(product => {
+    productsList.forEach(product => {
         const quantityInput = document.getElementById(`quantity-${product.id}`);
         const quantity = quantityInput.value || 0;
 
@@ -43,10 +43,15 @@ function calculateTotal() {
         const price = quantity > 5 ? product.price * 0.9 : product.price; 
         total += price * quantity;
     });
-    alert(`Total: $${total}`);
     
     return total;
 }
+
+// Add event listener to calculate total on button click
+const calculateButton = document.getElementById('calculate-total').addEventListener('click', () => {
+    const total = calculateTotal(products);
+    alert(`Total: $${total}`);
+});
 
 
 //-------------- Part 2-2: Modal Popup--------------

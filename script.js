@@ -8,12 +8,12 @@ const productList = document.getElementById('product-list');
 
 // Function to render the product list
 productList.innerHTML = products.map((product, index) => `
-<div class="product-card" key=${index}>
-    <img class="product-image" src=${product.image} alt="Product image" onclick="openModal(${product.id})">
+<div class="product-card" key=${index} onclick="openModal(${product.id})">
+    <img class="product-image" src=${product.image} alt="Product image">
     <div class="product-info">
         <h2 class="product-name">${product.name}</h2>
         <p class="product-description">${product.description}</p>
-        <button class="btn" onclick="openModal(${product.id})">View detail</button>
+        <p id="product-price">$${product.price}</p>
 
     </div>
 </div>
